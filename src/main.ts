@@ -1,3 +1,8 @@
+// @deno-types="./asset-url.d.ts"
+import flowerUrl from "./assets/flower.png?no-inline";
+// @deno-types="./asset-url.d.ts"
+import leafUrl from "./assets/leaf.png?no-inline";
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -5,7 +10,10 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute(
+  "aria-label",
+  "A face decorated with a flower and a green leaf",
+);
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +66,29 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+const images = [
+  // flower.png: global quiz, CC0
+  // https://openclipart.org/detail/177589/simple-flower
+  { url: flowerUrl, x: "30" },
+
+  // leaf.png: laobc, CC0
+  // https://openclipart.org/detail/61483/simple-leaf
+  { url: leafUrl, x: "130" },
+];
+
+for (const item of images) {
+  const image = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  image.setAttribute("href", item.url);
+  image.setAttribute("x", item.x);
+  image.setAttribute("y", "10");
+  image.setAttribute("width", "50");
+  image.setAttribute("height", "50");
+  face.append(image);
+}
 
 portrait.append(face);
 
