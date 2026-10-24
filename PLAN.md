@@ -23,3 +23,7 @@ I will choose the portrait that looks clear at a small size and best shows the c
 - A: Explored on branch A. Added 120 circles in three rings.
 - B: Explored on branch B. Used flower and leaf images from Openclipart instead of drawing them myself.
 - C: Explored on branch C. Added a yellow-orange gradient and a curved smile.
+
+## Final choice
+
+I chose branch C as the default portrait. Its warm colors and curved smile show the character's friendly personality clearly at a small size. A's bubbles and B's flower and leaf add more decoration, but I prefer C's simple expression. A and B remain on their own branches.
