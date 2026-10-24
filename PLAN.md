@@ -17,3 +17,9 @@ I will use a light yellow to orange gradient on the face. I will draw a smiling 
 ## Choice
 
 I will choose the portrait that looks clear at a small size and best shows the character's friendly, lively personality.
+
+## Exploration status
+
+- A: Explored on branch A. Added 120 circles in three rings.
+- B: Explored on branch B. Used flower and leaf images from Openclipart instead of drawing them myself.
+- C: Explored on branch C. Added a yellow-orange gradient and a curved smile.
